@@ -1,0 +1,83 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    letter-spacing: 0.18em;
+    color: white;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+header {
+    background: rgba(0, 0, 0, 0.7);
+    padding-top: 30px;
+    padding-bottom: 50px;
+    border-bottom: 3px solid rgb(224, 64, 251);
+}
+.titleImage > img {
+    height: 12%;
+    border-radius: 100%;
+}
+.titlecard {
+    font-size: 1.8em;
+    font-weight: 200;
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+}
+.titlecard > * {
+    margin: 30px;
+}
+nav ul li {
+    display: inline-block;
+    font-weight: 600;
+}
+
+nav ul li:not(:last-child):after {
+    content: " /";
+}
+
+nav ul {
+    padding-left: 130px;
+    color: rgb(224, 64, 251);
+    text-decoration: none;
+}
+nav ul li a, nav ul li a:hover {
+    text-decoration: none;
+    color: rgb(224, 64, 251)
+}
+.card {
+    margin: 1.4%;
+    background-color: rgba(0, 0, 0, 0.7) !important;
+    max-width: 22%;
+}
+.gradient-card-header {
+    padding: 20px;
+}
+
+.alpha {
+    background-color: rgba(0, 0, 0, 0.87);
+}
+
+.content {
+    max-width: 50%;
+    margin: auto;
+}
+
+.post > .title {
+    text-align: center;
+}
+hr {
+    width: 70%;
+    background-color: white;
+}
+.post-text {
+    max-width: 85%;
+    margin: auto;
+    padding-top: 50px;
+    text-align: center;
+}
