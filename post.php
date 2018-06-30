@@ -21,8 +21,8 @@ $post = $st->fetch();
         <?php require_once('header.php')?>
         <div class="content alpha my-5 p-5">
             <article class="post">
-                <h3 class="title"><?= $post['title'] ?></h3>
-                <div class="metadata d-flex justify-content-around">
+                <h3 class="title"><span><?= $post['title'] ?></span></h3>
+                <div class="metadata d-flex justify-content-between">
                     <p class="flex-item"><?= $post['date_created'] ?></p>
                     <p class="flex-item">Author Name</p>
                 </div>

@@ -5,6 +5,8 @@
  * Date: 28/6/18
  * Time: 11:13 AM
  */
+
+session_start();
 error_reporting(E_ALL);
 ini_set('display_errors', true);
 

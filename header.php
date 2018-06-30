@@ -12,17 +12,17 @@
         <p>Absolute Despair (working title)</p>
     </div>
     <nav>
-        <ul>
+        <ul class="links">
             <li><a href="blog.php">Home</a></li>
-            <li><a href="about.html">About</a></li>
+            <li><a href="about.php">About</a></li>
             <li><a href="http://09eragera09.github.io" target="_blank">Main Site</a></li>
         </ul>
+        <div class="login">
+            <ul>
+                <li><a href="login.php">Login</a></li>
+                <li><a href="signup.php">Sign Up</a></li>
+            </ul>
+        </div>
     </nav>
-    <!-- Hidden because PHP Logic not implemented yet.
-    <div class="login">
-        <ul>
-            <li><a href="login.html">Login</a></li>
-            <li><a href="signup.html">Sign Up</a></li>
-        </ul>
-    </div>-->
+
 </header>
