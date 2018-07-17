@@ -25,31 +25,29 @@ try {if (!empty($_POST)) {
     <head><?php require_once('./head.php') ?></head>
     <body>
         <?php require_once("./header.php") ?>
-        <?php if ($userFound) {
-            $_SESSION['user'] = $userFound;
-            unset($_SESSION['user']['password']);
-            ?>
-            <div class="content alpha message">
-                <div>Logged in successfully. You will be redirected in 5 seconds</div><br>
-                <a class="link" href="<?= BASE_URL?>/blog.php">Click here to go back instantly.</a>
-            </div>
-            <script>
-                setTimeout(function() {
-                    window.location = 'blog.php';
-                }, 1000 * 5);
-            </script>
-        <?php } elseif (empty($userFound)) {?>
-            <div class="content alpha message">
-                <div>User not found. Check that the username and password are correct.</div><br>
-                <a class="link" href="<?= BASE_URL?>/signup.php">Click here to sign up.</a><br>
-                <a class="link" href="<?= BASE_URL?>/blog.php">Click here to go back to the homepage.</a>
-            </div>
-        <?php } else {?>
-            <div class="content alpha message">
-                <div>Internal Server Error</div>
-                <pre><?php var_export($err)?></pre>
-                <a class="link" href="<?= BASE_URL?>/blog.php">Click here to go back to the homepage.</a>
-            </div>
-        <?php } require_once("script.php")?>
+        <div class="content alpha message my-5 p-5 col-7">
+            <article class="post">
+                <?php if (!empty($userFound)) {
+                    $_SESSION['user'] = $userFound
+                    ?>
+                    <h3 class="title"><span>Logged In</span></h3><br><br>
+                    <div>Logged in successfully. You will be redirected in 5 seconds</div><br>
+                    <a class="link" href="<?= BASE_URL?>/blog.php">Click here to go back instantly.</a><br><br>
+                    <script>
+                        setTimeout(function() {
+                            window.location = '<?=BASE_URL?>/blog.php';
+                        }, 1000 * 5);
+                    </script>
+                <?php } elseif (empty($userFound)) {?>
+                    <h3 class="title"><span>User Error</span></h3><br><br>
+                    <p class="post-text white-text">User not found. Please check the username and password.</p>
+                    <a class="link" href="<?= BASE_URL?>/blog.php">Click here to go back to the homepage.</a>
+                <?php } else {?>
+                    <h3 class="title"><span>Error</span></h3><br><br>
+                    <div>Internal Server Error</div>
+                    <pre><?php var_export($err)?></pre>
+                    <a class="link" href="<?= BASE_URL?>/blog.php">Click here to go back to the homepage.</a>
+                <?php }?></article></div>
+        <?php require_once("script.php")?>
     </body>
 </html>

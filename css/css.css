@@ -11,6 +11,7 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    background-position: center;
 }
 header {
     background: rgba(0, 0, 0, 0.7);
@@ -64,11 +65,11 @@ nav ul li a, nav ul li a:hover {
 }
 
 .content {
-    max-width: 50%;
+    /*max-width: 50%;*/
     margin: auto;
 }
 
-.post > .title {
+.post > .title, .comments > .title {
     text-align: center;
 }
 /*hr {
@@ -89,7 +90,6 @@ nav ul li a, nav ul li a:hover {
 .post-text {
     max-width: 85%;
     margin: auto;
-    padding-top: 50px;
     text-align: center;
 }
 nav {
@@ -100,14 +100,36 @@ nav {
     display: flex;
     justify-content: flex-end;
     white-space: nowrap;
-    margin-right: 25%;
+}
+.login {
+    margin-right: 5%;
 }
 .login > ul > li {
     display: inline-block;
 }
+
+a.link {
+    color: #e040fb;
+    display: inline-block;
+    font-weight: 600;
+}
+a.link:hover {
+    color: #e040fb;
+}
+a.link:after {
+    content: '';
+    width: 0;
+    height: 1px;
+    display: block;
+    background: #e040fb;
+    transition: 300ms;
+}
+a.link:hover:after {
+    width: 100%;
+}
+
 .login > ul > li > a {
     text-decoration: none;
-    color: #e040fb;
     padding: 7px;
     margin: 10px;
     border: 1px solid rgba(224, 64, 251, 0.5);
@@ -137,4 +159,104 @@ nav {
 
 .md-form input[type=date]:focus:not([readonly])+label, .md-form input[type=datetime-local]:focus:not([readonly])+label, .md-form input[type=email]:focus:not([readonly])+label, .md-form input[type=number]:focus:not([readonly])+label, .md-form input[type=password]:focus:not([readonly])+label, .md-form input[type=search-md]:focus:not([readonly])+label, .md-form input[type=search]:focus:not([readonly])+label, .md-form input[type=tel]:focus:not([readonly])+label, .md-form input[type=text]:focus:not([readonly])+label, .md-form input[type=time]:focus:not([readonly])+label, .md-form input[type=url]:focus:not([readonly])+label, .md-form textarea.md-textarea:focus:not([readonly])+label {
     color: #e040fb;
+}
+.btn-primary{
+    background-color: #e040fb !important;
+}
+.btn-primary:hover {
+    background-color: #9831b3 !important;
+}
+#newPost {
+    width: 50%;
+    height: auto;
+}
+/* Validation CSS */
+
+label.error {
+    all: initial;
+}
+
+label.error {
+    color: white;
+    background: #d14141;
+    padding: 5px;
+    position: absolute;
+    z-index: 10;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-weight: normal !important;
+    font-size: 12px;
+    border-radius: 3px;
+    animation: label-error-slide-down .5s ease-out;
+}
+
+label.error:before {
+     content: "";
+     width: 0;
+     height: 0;
+     border-style: solid;
+     border-width: 10px 5px 0 5px;
+     border-color: #d14141 transparent transparent transparent;
+     position: absolute;
+     top: calc(100% - 1px);
+     left: 50%;
+     transform: translatex(-50%);
+ }
+
+.md-form input[type=date]:focus:not([readonly])+label.error, .md-form input[type=datetime-local]:focus:not([readonly])+label.error, .md-form input[type=email]:focus:not([readonly])+label.error, .md-form input[type=number]:focus:not([readonly])+label.error, .md-form input[type=password]:focus:not([readonly])+label.error, .md-form input[type=search-md]:focus:not([readonly])+label.error, .md-form input[type=search]:focus:not([readonly])+label.error, .md-form input[type=tel]:focus:not([readonly])+label.error, .md-form input[type=text]:focus:not([readonly])+label.error, .md-form input[type=time]:focus:not([readonly])+label.error, .md-form input[type=url]:focus:not([readonly])+label.error, .md-form textarea.md-textarea:focus:not([readonly])+label.error {
+    color: white;
+}
+
+@keyframes label-error-slide-down {
+    from {
+        transform: translateX(-50%) translateY(-50%);
+        opacity: 0;
+        pointer-events: none;
+    }
+    to {
+        transform: translateX(-50%) translateY(0);
+        opacity: 1;
+        pointer-events: initial;
+    }
+}
+.md-form {
+    margin-top: 20px;
+}
+.g-recaptcha {
+    display: inline-block;
+}
+
+.comment {
+    border: 1px solid #666666;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+.pink-textarea.md-form .prefix.active {
+    color: #e040fb;
+}
+#commentForm textarea {
+    color: #FFF;
+}
+#dropdownToggle {
+    background: none !important;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+#dropdownToggle:after {
+    content: none;
+}
+.contextImage {
+    height: 15px;
+    width: auto;
+}
+ul.contact {
+    padding: 20px 0 20px 0;
+    text-align: center;
+}
+ul.contact > li {
+    display: inline-block;
 }

@@ -15,7 +15,9 @@ define('DB_NAME', 'blog');
 define('DB_USERNAME', 'eragera');
 define('DB_PASSWORD', '23847442');
 define('BASE_URL', 'http://localhost:3000');
-
+define('RECAPTCHA_URL','https://www.google.com/recaptcha/api/siteverify');
+define('RECAPTCHA_SECRET_KEY', '6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe');
+define('RECAPTCHA_PUBLIC_KEY', '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI');
 
 $dsn = "mysql:host=".DB_HOST."; dbname=".DB_NAME."; charset=UTF8";
 

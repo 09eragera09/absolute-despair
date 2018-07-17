@@ -14,7 +14,7 @@ require_once('config.php');
     </head>
     <body>
         <?php require_once("header.php")?>
-        <div class="content alpha my-5 p-5">
+        <div class="content alpha my-5 p-5 col-7">
             <article class="form-parent">
                 <!-- Material form login -->
                 <form class="loginForm" action="loginLanding.php" method="post">
@@ -34,15 +34,16 @@ require_once('config.php');
                     </div>
 
                     <div class="text-center mt-4">
-                        <button class="btn btn-default" type="submit">Login</button>
+                        <button class="btn btn-outline-secondary" type="submit">Login<i class="fa fa-paper-plane-o ml-2"></i></button>
                     </div>
                 </form>
+
+                <?php require_once("script.php")?>
                 <script>
-                    $("#loginForm").validate()
+                    $(".loginForm").validate()
                 </script>
                 <!-- Material form login -->
             </article>
         </div>
-        <?php require_once("script.php")?>
     </body>
 </html>

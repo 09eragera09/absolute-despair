@@ -5,6 +5,8 @@
  * Date: 28/6/18
  * Time: 12:40 AM
  */
+
+require_once("config.php");
 ?>
 <header>
     <div class="titlecard">
@@ -13,15 +15,18 @@
     </div>
     <nav>
         <ul class="links">
-            <li><a href="blog.php">Home</a></li>
-            <li><a href="about.php">About</a></li>
-            <li><a href="http://09eragera09.github.io" target="_blank">Main Site</a></li>
+            <li><a class="link" href="blog.php">Home</a></li>
+            <li><a class="link" href="about.php">About</a></li>
+            <li><a class="link" href="http://09eragera09.github.io" target="_blank">Main Site</a></li>
         </ul>
         <div class="login">
+            <?php if(!empty($_SESSION['user'])){?>
+                Welcome Back, <?=$_SESSION['user']['username']?>
+            <?php } else {?>
             <ul>
                 <li><a href="login.php">Login</a></li>
                 <li><a href="signup.php">Sign Up</a></li>
-            </ul>
+            </ul> <?php }?>
         </div>
     </nav>
 
