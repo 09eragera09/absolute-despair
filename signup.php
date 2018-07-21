@@ -63,7 +63,7 @@ unset($_SESSION)
                     <div class="md-form">
                         <i class="fa fa-lock prefix grey-text"></i>
                         <input type="password" name="passwordRepeat" equalTo="#materialFormRegisterPasswordEx" id="materialFormRegisterPasswordConfirmEx" class="form-control" required data-msg-pattern="Passwords do not match">
-                        <label for="materialFormRegisterConfirmEx">Confirm your password</label>
+                        <label for="materialFormRegisterPasswordConfirmEx">Confirm your password</label>
                     </div>
 
                     <div class="text-center my-5">
@@ -75,6 +75,7 @@ unset($_SESSION)
                     </div>
                 </form>
                 <?php require_once("script.php");?>
+                <!--suppress JSUnusedLocalSymbols -->
                 <script>
                     //Things to be done at the start
                     $("#passwordRule").toggle();
@@ -110,14 +111,6 @@ unset($_SESSION)
                                     //disableSubmit(true);
                                 } //else disableSubmit(false);
                             }});
-                    }
-                    function disableSubmit(bool){
-                        if (bool) {
-                            $("#register").prop('disabled', true);
-                            $(".btn-primary").css("background-color", "red", "!important");
-                        } else {
-                            $("#register").prop('disabled', false)
-                        }
                     }
                     $("#registerForm").validate();
                 </script>

@@ -8,21 +8,22 @@ body {
     font-family: 'Source Sans Pro', sans-serif;
     letter-spacing: 0.18em;
     color: white;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
     background-size: cover;
-    background-position: center;
+    background: no-repeat fixed center;
 }
+
 header {
     background: rgba(0, 0, 0, 0.7);
     padding-top: 30px;
-    padding-bottom: 50px;
+    padding-bottom: 30px;
     border-bottom: 3px solid rgb(224, 64, 251);
 }
+
 .titleImage > img {
     height: 12%;
     border-radius: 100%;
 }
+
 .titlecard {
     font-size: 1.8em;
     font-weight: 200;
@@ -30,9 +31,11 @@ header {
     align-items: center;
     margin-left: 50px;
 }
+
 .titlecard > * {
     margin: 30px;
 }
+
 nav ul li {
     display: inline-block;
     font-weight: 600;
@@ -47,15 +50,18 @@ nav ul {
     color: rgb(224, 64, 251);
     text-decoration: none;
 }
+
 nav ul li a, nav ul li a:hover {
     text-decoration: none;
     color: rgb(224, 64, 251)
 }
+
 .card {
     margin: 1.4%;
     background-color: rgba(0, 0, 0, 0.7) !important;
     max-width: 22%;
 }
+
 .gradient-card-header {
     padding: 20px;
 }
@@ -72,12 +78,20 @@ nav ul li a, nav ul li a:hover {
 .post > .title, .comments > .title {
     text-align: center;
 }
+
 /*hr {
     width: 5%;
     background-color: white;
 }*/
-.title { display: flex; justify-content: center; }
-.title span { position: relative; }
+.title {
+    display: flex;
+    justify-content: center;
+}
+
+.title span {
+    position: relative;
+}
+
 .title span:before {
     content: "";
     position: absolute;
@@ -87,23 +101,28 @@ nav ul li a, nav ul li a:hover {
     height: 1px;
     background: white;
 }
+
 .post-text {
     max-width: 85%;
     margin: auto;
     text-align: center;
 }
+
 nav {
     display: flex;
     justify-content: space-between;
 }
+
 .login > ul {
     display: flex;
     justify-content: flex-end;
     white-space: nowrap;
 }
+
 .login {
     margin-right: 5%;
 }
+
 .login > ul > li {
     display: inline-block;
 }
@@ -113,9 +132,11 @@ a.link {
     display: inline-block;
     font-weight: 600;
 }
+
 a.link:hover {
     color: #e040fb;
 }
+
 a.link:after {
     content: '';
     width: 0;
@@ -124,6 +145,7 @@ a.link:after {
     background: #e040fb;
     transition: 300ms;
 }
+
 a.link:hover:after {
     width: 100%;
 }
@@ -135,21 +157,20 @@ a.link:hover:after {
     border: 1px solid rgba(224, 64, 251, 0.5);
     -webkit-transition: background-color 0.1s;
     -moz-transition: background-color 0.1s;
-    -ms-transition: background-color 0.1s;
     -o-transition: background-color 0.1s;
     transition: background-color 0.1s;
 }
 
-.login> ul>li>a:hover {
+.login > ul > li > a:hover {
     background-color: #e040fb;
     color: aliceblue;
 }
+
 .message {
     text-align: center;
     padding: 20px;
     margin-top: 30px;
 }
-
 
 .md-form input[type=date]:focus:not([readonly]), .md-form input[type=datetime-local]:focus:not([readonly]), .md-form input[type=email]:focus:not([readonly]), .md-form input[type=number]:focus:not([readonly]), .md-form input[type=password]:focus:not([readonly]), .md-form input[type=search-md]:focus:not([readonly]), .md-form input[type=search]:focus:not([readonly]), .md-form input[type=tel]:focus:not([readonly]), .md-form input[type=text]:focus:not([readonly]), .md-form input[type=time]:focus:not([readonly]), .md-form input[type=url]:focus:not([readonly]), .md-form textarea.md-textarea:focus:not([readonly]) {
     -webkit-box-shadow: 0 1px 0 0 #e040fb;
@@ -157,19 +178,23 @@ a.link:hover:after {
     border-bottom: 1px solid #e040fb;
 }
 
-.md-form input[type=date]:focus:not([readonly])+label, .md-form input[type=datetime-local]:focus:not([readonly])+label, .md-form input[type=email]:focus:not([readonly])+label, .md-form input[type=number]:focus:not([readonly])+label, .md-form input[type=password]:focus:not([readonly])+label, .md-form input[type=search-md]:focus:not([readonly])+label, .md-form input[type=search]:focus:not([readonly])+label, .md-form input[type=tel]:focus:not([readonly])+label, .md-form input[type=text]:focus:not([readonly])+label, .md-form input[type=time]:focus:not([readonly])+label, .md-form input[type=url]:focus:not([readonly])+label, .md-form textarea.md-textarea:focus:not([readonly])+label {
+.md-form input[type=date]:focus:not([readonly]) + label, .md-form input[type=datetime-local]:focus:not([readonly]) + label, .md-form input[type=email]:focus:not([readonly]) + label, .md-form input[type=number]:focus:not([readonly]) + label, .md-form input[type=password]:focus:not([readonly]) + label, .md-form input[type=search-md]:focus:not([readonly]) + label, .md-form input[type=search]:focus:not([readonly]) + label, .md-form input[type=tel]:focus:not([readonly]) + label, .md-form input[type=text]:focus:not([readonly]) + label, .md-form input[type=time]:focus:not([readonly]) + label, .md-form input[type=url]:focus:not([readonly]) + label, .md-form textarea.md-textarea:focus:not([readonly]) + label {
     color: #e040fb;
 }
-.btn-primary{
+
+.btn-primary {
     background-color: #e040fb !important;
 }
+
 .btn-primary:hover {
     background-color: #9831b3 !important;
 }
+
 #newPost {
     width: 50%;
     height: auto;
 }
+
 /* Validation CSS */
 
 label.error {
@@ -193,19 +218,19 @@ label.error {
 }
 
 label.error:before {
-     content: "";
-     width: 0;
-     height: 0;
-     border-style: solid;
-     border-width: 10px 5px 0 5px;
-     border-color: #d14141 transparent transparent transparent;
-     position: absolute;
-     top: calc(100% - 1px);
-     left: 50%;
-     transform: translatex(-50%);
- }
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 5px 0 5px;
+    border-color: #d14141 transparent transparent transparent;
+    position: absolute;
+    top: calc(100% - 1px);
+    left: 50%;
+    transform: translatex(-50%);
+}
 
-.md-form input[type=date]:focus:not([readonly])+label.error, .md-form input[type=datetime-local]:focus:not([readonly])+label.error, .md-form input[type=email]:focus:not([readonly])+label.error, .md-form input[type=number]:focus:not([readonly])+label.error, .md-form input[type=password]:focus:not([readonly])+label.error, .md-form input[type=search-md]:focus:not([readonly])+label.error, .md-form input[type=search]:focus:not([readonly])+label.error, .md-form input[type=tel]:focus:not([readonly])+label.error, .md-form input[type=text]:focus:not([readonly])+label.error, .md-form input[type=time]:focus:not([readonly])+label.error, .md-form input[type=url]:focus:not([readonly])+label.error, .md-form textarea.md-textarea:focus:not([readonly])+label.error {
+.md-form input[type=date]:focus:not([readonly]) + label.error, .md-form input[type=datetime-local]:focus:not([readonly]) + label.error, .md-form input[type=email]:focus:not([readonly]) + label.error, .md-form input[type=number]:focus:not([readonly]) + label.error, .md-form input[type=password]:focus:not([readonly]) + label.error, .md-form input[type=search-md]:focus:not([readonly]) + label.error, .md-form input[type=search]:focus:not([readonly]) + label.error, .md-form input[type=tel]:focus:not([readonly]) + label.error, .md-form input[type=text]:focus:not([readonly]) + label.error, .md-form input[type=time]:focus:not([readonly]) + label.error, .md-form input[type=url]:focus:not([readonly]) + label.error, .md-form textarea.md-textarea:focus:not([readonly]) + label.error {
     color: white;
 }
 
@@ -221,9 +246,11 @@ label.error:before {
         pointer-events: initial;
     }
 }
+
 .md-form {
     margin-top: 20px;
 }
+
 .g-recaptcha {
     display: inline-block;
 }
@@ -233,30 +260,60 @@ label.error:before {
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
+    position: relative;
 }
+
 .pink-textarea.md-form .prefix.active {
     color: #e040fb;
 }
-#commentForm textarea {
+
+#commentForm textarea, #commentEditTextarea {
     color: #FFF;
 }
+
 #dropdownToggle {
     background: none !important;
     border: none;
     padding: 0;
     margin: 0;
 }
+
 #dropdownToggle:after {
     content: none;
 }
+
 .contextImage {
     height: 15px;
     width: auto;
 }
+
 ul.contact {
     padding: 20px 0 20px 0;
     text-align: center;
 }
+
 ul.contact > li {
     display: inline-block;
+}
+
+.post, .card {
+    position: relative;
+}
+
+.post-context {
+    left: 100%;
+    position: absolute;
+}
+
+.card-context {
+    right: 5%;
+    top: 10%;
+    position: absolute;
+}
+
+.userContext {
+    padding-left: 10px;
+    margin-right: 10px;
+    height: 7px;
+    width: auto;
 }

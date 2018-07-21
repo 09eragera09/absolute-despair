@@ -26,14 +26,14 @@ require_once("config.php");
                     <!-- Material input subject -->
                     <div class="md-form">
                         <i class="fa fa-tag prefix grey-text"></i>
-                        <input type="text" name="title" id="materialFormContactSubjectEx" class="form-control" maxlength="255">
+                        <input type="text" name="title" id="materialFormContactSubjectEx" class="form-control" maxlength="255" required>
                         <label for="materialFormContactSubjectEx">Title</label>
                     </div>
 
                     <!-- Material textarea message -->
                     <div class="md-form">
                         <i class="fa fa-pencil prefix grey-text"></i>
-                        <textarea type="text" name="text" id="materialFormContactMessageEx" class="form-control md-textarea" rows="3"></textarea>
+                        <textarea name="text" id="materialFormContactMessageEx" class="form-control md-textarea" rows="3" required></textarea>
                         <label for="materialFormContactMessageEx">Post Text</label>
                     </div>
 

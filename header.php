@@ -21,7 +21,15 @@ require_once("config.php");
         </ul>
         <div class="login">
             <?php if(!empty($_SESSION['user'])){?>
-                Welcome Back, <?=$_SESSION['user']['username']?>
+                <div class="btn-group">
+                    Welcome Back, <?=$_SESSION['user']['username']?>
+                    <button id="dropdownToggle" class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img class="contextImage userContext" src="assets/down-arrow.svg" /></button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Profile</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item js-log-out" href="#">Log Out</a>
+                    </div>
+                </div>
             <?php } else {?>
             <ul>
                 <li><a href="login.php">Login</a></li>
@@ -29,5 +37,24 @@ require_once("config.php");
             </ul> <?php }?>
         </div>
     </nav>
-
+    <?php require_once('script.php') ?>
+    <script>
+        $('.js-log-out').on('click', function (e) {
+            e.preventDefault();
+            new Promise((resolve, reject)=>{
+                $.ajax({
+                url: 'logOut.php',
+                method: 'post',
+                data: {
+                    username: "<?=$_SESSION['user']['username']?>"
+                },
+                dataType: 'JSON',
+                success: function (res) {
+                    if (res) {
+                        resolve("Success!")
+                    } else { reject(res)}
+                }
+            })}).then(()=>{location.reload(true)}).catch((err) => {console.log(err)});
+        })
+    </script>
 </header>
