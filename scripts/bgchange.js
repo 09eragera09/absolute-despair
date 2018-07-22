@@ -1,14 +1,14 @@
 ;(function() {
     const images = [
-        'http://localhost:3000/assets/1.png',
-        'http://localhost:3000/assets/2.png',
-        'http://localhost:3000/assets/3.png',
-        'http://localhost:3000/assets/4.png',
-        'http://localhost:3000/assets/5.png',
-        'http://localhost:3000/assets/6.png',
-        'http://localhost:3000/assets/7.png',
-        'http://localhost:3000/assets/8.png',
-        'http://localhost:3000/assets/9.png',
+        'http://shitwaifu.moe/blog/assets/1.png',
+        'http://shitwaifu.moe/blog/assets/2.png',
+        'http://shitwaifu.moe/blog/assets/3.png',
+        'http://shitwaifu.moe/blog/assets/4.png',
+        'http://shitwaifu.moe/blog/assets/5.png',
+        'http://shitwaifu.moe/blog/assets/6.png',
+        'http://shitwaifu.moe/blog/assets/7.png',
+        'http://shitwaifu.moe/blog/assets/8.png',
+        'http://shitwaifu.moe/blog/assets/9.png',
     ];
     const randomImage = images[Math.floor(Math.random() * images.length)];
     /* change the bg! */
