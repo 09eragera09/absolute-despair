@@ -309,6 +309,7 @@ ul.contact > li {
     right: 5%;
     top: 10%;
     position: absolute;
+    z-index: 100;
 }
 
 .userContext {
